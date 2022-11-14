@@ -29,13 +29,35 @@ var app = new Vue(
 
          removeFromTodo(index){
 
-            this.todoList.splice(index, 1);
+            this.todoList.splice(index, 0);
 
          },
 
          removeFromDone(index){
 
             this.doneList.splice(index, 1);
+
+         },
+
+         markAsDone(element, index){
+
+            if(element.done == false){
+               element.done = true;
+               this.doneList.push(element);
+            } 
+
+            this.todoList.splice(index, 0);
+
+         },
+
+         markAsDoneText(element, index){
+
+            if(element.done == false){
+               element.done = true;
+               this.doneList.push(element);
+            } 
+
+            this.todoList.splice(index, 1);
 
          }
 		}
