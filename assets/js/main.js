@@ -30,9 +30,10 @@ var app = new Vue(
 
 		methods:{
 
-         removeFromTodo(index){
+         removeFromTodo(element, index){
 
             this.todoList.splice(index, 0);
+            element.done = true;
 
          },
 
