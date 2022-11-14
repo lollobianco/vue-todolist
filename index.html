@@ -25,7 +25,11 @@
 
                <li v-for="(element, index) in todoList" class="list-group-item d-flex justify-content-between align-items-center">
                   {{element.text}}
-                   <button class="btn btn-light trash-button"><i class="fa-solid fa-trash-can"></i></button>
+                  <div>
+                     <button class="btn btn-light done-button"><i class="fa-solid fa-circle-check"></i></button> 
+                     <button class="btn btn-light trash-button" @click="removeFromTodo(element, index)"><i class="fa-solid fa-trash-can"></i></button>                     
+                  </div>
+                   
                </li>
                   
             </ul>
@@ -42,7 +46,7 @@
 
                <li v-for="(element, index) in doneList" class="list-group-item d-flex justify-content-between align-items-center">
                   {{element.text}}
-                  <button class="btn btn-light trash-button"><i class="fa-solid fa-trash-can"></i></button>
+                  <button class="btn btn-light trash-button" @click="removeFromDone(element, index)"><i class="fa-solid fa-trash-can"></i></button>
                </li>
                   
             </ul>

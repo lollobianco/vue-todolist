@@ -1,3 +1,7 @@
 .trash-button:hover{
    color: red;
 }
+
+.done-button:hover{
+   color: #07db00;
+}

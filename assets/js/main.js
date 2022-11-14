@@ -26,7 +26,18 @@ var app = new Vue(
 
 	  },
 		methods:{
-			
+
+         removeFromTodo(index){
+
+            this.todoList.splice(index, 1);
+
+         },
+
+         removeFromDone(index){
+
+            this.doneList.splice(index, 1);
+
+         }
 		}
 	}
 );
