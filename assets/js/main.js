@@ -26,14 +26,10 @@ var app = new Vue(
 
          addTaskText: '',
 
-         addTask: [
-            {
-               text: '',
-               done: false,
-            } 
-         ]
+         addTask: {text: '', done: false}
 
 	  },
+
 		methods:{
 
          removeFromTodo(index){
@@ -72,18 +68,18 @@ var app = new Vue(
 
          addButton(){
 
-            this.addTask.push(addTaskText)
+            if(this.addTaskText != ''){
 
-            // for (let i = 0; i == this.todoList.length; i++){
+               let newTask = 
+               
+               {
+                  text: this.addTaskText, 
+                  done: false
+               };
 
-            //    if(i == this.todoList.lenght){
+               this.todoList.push(newTask)
 
-            //       this.todoList[i].text.push(addTask.value);
-
-            //    }
-
-            // };
-            
+            }         
 
          }
 		}
