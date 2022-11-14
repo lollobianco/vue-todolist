@@ -16,10 +16,12 @@
 
       <div class="vh-100 vw-100 bg-dark p-4 d-flex flex-column justify-content-center align-items-center">
 
-         <div class="container bg-white p-3 rounded-4 mb-5 d-flex">
-            <input class="form-control me-5" type="text" placeholder="Add something to do!" aria-label="default input example">
-            <button class="px-5 ms-5 btn btn-light done-button d-flex align-items-center" @click="markAsDone(element, index)">Add<i class="ms-2 fa-solid fa-plus"></i></button> 
-         </div>
+         <div class="container bg-white p-3 rounded-4 mb-5">
+            <form class="d-flex">
+               <input class="form-control" type="text" placeholder="Add something to do!" aria-label="default input example" v-model="addTaskText">
+               <button type="submit" class="px-5 ms-3 btn btn-light done-button d-flex align-items-center" @click="addButton()" onclick="return false">Add<i class="ms-2 fa-solid fa-plus"></i></button> 
+            </form>
+            </div>
          
 
          <div class="container bg-white p-3 rounded-4">

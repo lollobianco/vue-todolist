@@ -22,6 +22,15 @@ var app = new Vue(
 
          doneList: [
             
+         ],
+
+         addTaskText: '',
+
+         addTask: [
+            {
+               text: '',
+               done: false,
+            } 
          ]
 
 	  },
@@ -58,6 +67,23 @@ var app = new Vue(
             } 
 
             this.todoList.splice(index, 1);
+
+         },
+
+         addButton(){
+
+            this.addTask.push(addTaskText)
+
+            // for (let i = 0; i == this.todoList.length; i++){
+
+            //    if(i == this.todoList.lenght){
+
+            //       this.todoList[i].text.push(addTask.value);
+
+            //    }
+
+            // };
+            
 
          }
 		}
