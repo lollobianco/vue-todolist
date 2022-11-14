@@ -78,6 +78,8 @@ var app = new Vue(
 
                this.todoList.push(newTask)
 
+               this.addTaskText = ''
+
             }         
 
          }
