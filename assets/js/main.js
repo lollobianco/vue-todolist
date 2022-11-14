@@ -18,6 +18,10 @@ var app = new Vue(
                done: false,
             },
 
+         ],
+
+         doneList: [
+            
          ]
 
 	  },

@@ -14,28 +14,43 @@
 
    <div id="app">
 
-      <div class="vh-100 vw-100 bg-dark text-white p-4">
+      <div class="vh-100 vw-100 bg-dark p-4">
 
-         <h1 class="text-center">ToDo List</h1>
 
-         <div class="d-flex align-items-center justify-content-center">
+         <div class="container bg-white p-3 rounded-4">
 
-            <div class="container bg-white p-3 rounded-4">
+            <h3 class="ms-2 mb-4">Todo List:</h3>
 
-               <ul class="list-group list-group-flush ">
+            <ul v-if="todoList.length > 0" class="list-group list-group-flush">
 
-                  <li v-for="(element, index) in todoList" class="list-group-item d-flex justify-content-between align-items-center">
-                     {{element.text}}
-                     <button class="btn btn-light trash-button"><i class="fa-solid fa-trash-can"></i></button>
-                  </li>
+               <li v-for="(element, index) in todoList" class="list-group-item d-flex justify-content-between align-items-center">
+                  {{element.text}}
+                   <button class="btn btn-light trash-button"><i class="fa-solid fa-trash-can"></i></button>
+               </li>
                   
-               </ul>
+            </ul>
 
-            </div>
+            <h5 class="ms-2 mb-1" v-else>You still have nothing to do</h5>
 
          </div>
 
-         
+         <div class="container bg-white p-3 rounded-4 mt-5">
+
+            <h3 class="ms-2 mb-4">Done List:</h3>
+
+            <ul v-if="doneList.length > 0" class="list-group list-group-flush">
+
+               <li v-for="(element, index) in doneList" class="list-group-item d-flex justify-content-between align-items-center">
+                  {{element.text}}
+                  <button class="btn btn-light trash-button"><i class="fa-solid fa-trash-can"></i></button>
+               </li>
+                  
+            </ul>
+
+            <h5 class="ms-2 mb-1" v-else>You haven't done anything yet</h5>
+
+         </div>
+
 
       </div>
 
