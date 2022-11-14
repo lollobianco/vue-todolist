@@ -19,7 +19,7 @@
          <div class="container bg-white p-3 rounded-4 mb-5">
             <form class="d-flex">
                <input class="form-control rounded-4" type="text" placeholder="Add something to do!" aria-label="default input example" v-model="addTaskText">
-               <button type="submit" class="px-5 ms-3 btn btn-light done-button d-flex align-items-center" @click="addButton()" onclick="return false">Add<i class="ms-2 fa-solid fa-plus"></i></button> 
+               <button type="submit" class="px-5 ms-3 btn btn-light done-button d-flex align-items-center" v-on:keyup.enter="submit" @click="addButton()" onclick="return false">Add<i class="ms-2 fa-solid fa-plus"></i></button> 
             </form>
             </div>
          

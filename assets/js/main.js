@@ -26,8 +26,6 @@ var app = new Vue(
 
          addTaskText: '',
 
-         addTask: {text: '', done: false}
-
 	  },
 
 		methods:{
@@ -71,7 +69,7 @@ var app = new Vue(
             if(this.addTaskText != ''){
 
                let newTask = 
-               
+
                {
                   text: this.addTaskText, 
                   done: false
